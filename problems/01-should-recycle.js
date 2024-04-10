@@ -23,7 +23,7 @@ function shouldRecycle(item) {
   } else if (item.paper) {
     return 'Recycle Me!'
   }
-  return 'Cannot be recycled
+  return 'Cannot be recycled'
 }
 
 
