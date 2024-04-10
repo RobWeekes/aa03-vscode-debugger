@@ -10,14 +10,18 @@ of foods that you have fed that pet.
 function feedPet(name) {
   const foods = [];
   return (food) => {
-    return "Fed " + name + " " + foods.push(food) + ".";
+      // debugger
+      foods.push(food);
+      console.log(foods);
+      console.log(foods);
+      return "Fed " + name + " " + foods.join(', ') + ".";
   }
 }
 
 const feedHydra = feedPet('Hydra');
 
-console.log(feedHydra('bones')); // Fed Hyrda bones.
-console.log(feedHydra('Hercules')); // Fed Hyrda bones, Hercules.
+console.log(feedHydra('bones')); // Fed Hydra bones.
+console.log(feedHydra('Hercules')); // Fed Hydra bones, Hercules.
 
 const feedHippogriff = feedPet('Hippogriff');
 
