@@ -7,18 +7,22 @@ rating.
 // test comment
 
 function cutestCat(cats) {
-  let cutest;
-  let i = 0;
 
-  while (i < cats.length) {
-    const cat = cats[i];
-    if (cat > cutest) {
-      cutest = cat.cuteness;
+    let cutest = cats[0];  // similar to ' let sum = 0 '
+    let i = 0;
+
+    while (i < cats.length) {
+        const cat = cats[i];
+        // console.log(cat);
+        // console.log(cutest);
+
+        if (cat.cuteness > cutest.cuteness) {
+            cutest = cat;
+        }
+        i++;
     }
-    i++;
-  }
 
-  return cutest;
+    return cutest;
 }
 
 const cats = [
